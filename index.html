@@ -258,6 +258,148 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/30/px-profile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Han Meilan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blog-logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柠檬草的味道">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/30/px-profile/" itemprop="url">像素，分辨率，rem</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-30T00:17:23+08:00">
+                2018-03-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="英寸Inch"><a href="#英寸Inch" class="headerlink" title="英寸Inch"></a>英寸Inch</h3><p>【英寸Inch】英寸表示屏幕斜对角线的长度。  </p>
+<h3 id="像素Pixel"><a href="#像素Pixel" class="headerlink" title="像素Pixel"></a>像素Pixel</h3><p>【像素Pixel】像素是图像的基本采样单位，它不是一个确定的物理量，因为像素点的物理大小是不确定的。</p>
+<h3 id="分辨率"><a href="#分辨率" class="headerlink" title="分辨率"></a>分辨率</h3><p>【分辨率】分辨率是屏幕像素的数量，一般用屏幕宽度的像素点乘以屏幕高度的像素点。如描述iphone6的分辨率是750*1334.</p>
+<p>分辨率又分为【物理分辨率】和【逻辑分辨率】，值得注意的是实际工作中设计师常常给的是物理分辨率，程序中用到的是逻辑分辨率，但是都称为分辨率，容易混淆。</p>
+<h3 id="物理分辨率"><a href="#物理分辨率" class="headerlink" title="物理分辨率"></a>物理分辨率</h3><p>【物理分辨率】是硬件所支持的分辨率，【逻辑分辨率】是软件可以达到的分辨率。</p>
+<p>物理分辨率和逻辑分辨率的商称为【像素倍率dpr】，也就是常说的几倍屏。</p>
+<p>如：iphone6的分辨率写着375<em>667，这里指的就是它的逻辑分辨率。上面提的750</em>1334则是它的物理分辨率。</p>
+<p>所以iphone6的像素倍率=（750<em>1334）/（375</em>667）=2</p>
+<h3 id="px"><a href="#px" class="headerlink" title="px"></a>px</h3><p>【px】px就是Pixel的缩写，就是指像素。这个作为图片采样的基本单位，没什么需要特别说明的。</p>
+<h3 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h3><p>【rem】在做移动端适配是最常用的方法就是使用rem作为单位，因为rem是根据html的fontsize去动态计算实际的px的。</p>
+<p>所以常常应用这点，做反向使用。即根据屏幕大小动态的设置fontsize.来达到不同的分辨率下有一样的效果。</p>
+<h3 id="rpx"><a href="#rpx" class="headerlink" title="rpx"></a>rpx</h3><p>【rpx】rpx其实是微信对于rem的一种应用的规定，或者说一种设计的方案，官方上规定屏幕宽度为20rem，规定屏幕宽为750rpx。</p>
+<p>所以在微信小程序中1rem=750/20rpx。</p>
+<p>但是这不是我们要关注的重点。</p>
+<p>在使用rem时，我们常常让设计师根据iphone6的标准出设计稿。因为如果以iphone6为标准，并且在iphone6上将fontsize设置成62.5%。</p>
+<p>那么1rem就等于10px，我们只要将设计师标注的尺寸（一般标注的是物理分辨率）除以20就可以得到单位为rem的数值了。</p>
+<p>在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 375px = 750物理像素，1rpx = 0.5px = 1物理像素。</p>
+<p>css中的px与设备的物理像素并非绝对的一比一关系。</p>
+<p>px与物理像素的比例与设备的dpr（像素倍率）有关。</p>
+<p>rpx称为相对像素值，rpx与物理像素也并非绝对的一比一关系。</p>
+<p>wxss将设备宽定义为750rpx，是以iPhone6的分辨率（750x1334）为基准划分的。</p>
+<p>也就是说，在iPhone6上，1rpx=1物理像素=0.5px。</p>
+<p>因为设计师标注的尺寸一般是物理分辨率。所以如果以iphone6为标准出设计稿的话，那么我们就可以不需要经过换算直接标准rpx。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/29/require-js/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -699,7 +841,7 @@ require([&quot;jquery&quot;,&quot;testA&quot;],function($){
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
