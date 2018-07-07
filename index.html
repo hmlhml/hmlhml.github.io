@@ -277,7 +277,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/07/mysql-报错问题/" itemprop="url">mysql,报错问题</a></h1>
+                <a class="post-title-link" href="/2018/07/07/mysql-报错问题/" itemprop="url">mysql报错问题-1045 - Access denied for user </a></h1>
         
 
         <div class="post-meta">
@@ -329,14 +329,13 @@
       
         
           
-            <p>##1045 - Access denied for user ‘root‘@’localhost’ (using password: NO) </p>
-<p>遇到MySQL“错误代码#1045 Access denied for user ‘root‘@’localhost’ (using password:YES)” 需要重置root账号权限密码，这个一般还真不好解决。</p>
+            <p>遇到MySQL<code>错误代码#1045 Access denied for user &#39;root&#39;@&#39;localhost&#39; (using password:YES)</code> 需要重置root账号权限密码，这个一般还真不好解决。</p>
 <ul>
-<li><p>第一点，停止mysql服务，CMD打开DOS窗口，输入 “net stop mysql “；不过有时候不停止也是无所谓；</p>
+<li><p>第一点，停止mysql服务，CMD打开DOS窗口，输入 <code>net stop mysql</code>；不过有时候不停止也是无所谓；</p>
 </li>
-<li><p>第二点，在CMD命令行窗口，进入MYSQL安装目录 比如“E:\APMServ5.2.6\MySQL5.1\bin”（我用的就是APMServer）</p>
+<li><p>第二点，在CMD命令行窗口，进入MYSQL安装目录 比如<code>E:\APMServ5.2.6\MySQL5.1\bin</code>（我用的就是APMServer）</p>
 </li>
-<li>第三点，在第二点的命令窗口输入命令为：”mysqld -nt –skip-grant-tables”。作用是，进入mysql安全模式，即当mysql起来后，不用输入密码就能进入数据库。 </li>
+<li>第三点，在第二点的命令窗口输入命令为：<code>mysqld -nt --skip-grant-tables</code>。作用是，进入mysql安全模式，即当mysql起来后，不用输入密码就能进入数据库。 </li>
 </ul>
 <p>这时候可以进入数据库后，给自己的数据库重新设置密码就可以了！</p>
 
