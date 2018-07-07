@@ -258,6 +258,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/07/mysql-报错问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Han Meilan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blog-logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柠檬草的味道">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/07/mysql-报错问题/" itemprop="url">mysql,报错问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-07T21:17:22+08:00">
+                2018-07-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##1045 - Access denied for user ‘root‘@’localhost’ (using password: NO) </p>
+<p>遇到MySQL“错误代码#1045 Access denied for user ‘root‘@’localhost’ (using password:YES)” 需要重置root账号权限密码，这个一般还真不好解决。</p>
+<ul>
+<li><p>第一点，停止mysql服务，CMD打开DOS窗口，输入 “net stop mysql “；不过有时候不停止也是无所谓；</p>
+</li>
+<li><p>第二点，在CMD命令行窗口，进入MYSQL安装目录 比如“E:\APMServ5.2.6\MySQL5.1\bin”（我用的就是APMServer）</p>
+</li>
+<li>第三点，在第二点的命令窗口输入命令为：”mysqld -nt –skip-grant-tables”。作用是，进入mysql安全模式，即当mysql起来后，不用输入密码就能进入数据库。 </li>
+</ul>
+<p>这时候可以进入数据库后，给自己的数据库重新设置密码就可以了！</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/30/px-profile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -841,21 +970,12 @@ require([&quot;jquery&quot;,&quot;testA&quot;],function($){
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
             
 
             
@@ -863,7 +983,7 @@ require([&quot;jquery&quot;,&quot;testA&quot;],function($){
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
