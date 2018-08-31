@@ -63,7 +63,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="webpack," />
 
 
 
@@ -74,17 +74,18 @@
 
 
 
-<meta name="description" content="遇到MySQL错误代码#1045 Access denied for user &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; (using password:YES) 需要重置root账号权限密码，这个一般还真不好解决。  第一点，停止mysql服务，CMD打开DOS窗口，输入 net stop mysql；不过有时候不停止也是无所谓；  第二点，在CMD命令行窗口，进入M">
+<meta name="description" content="html-webpack-plugin作用： 自动在内存中根据指定页面生成一个内存的页面 自动把打包好的bundle.js追加到页面中去,模板中就不需要引入bundle.js了  安装npm install  html-webpack-plugin -D 使用方法12345678910111213141516171819const path = require(&apos;path&apos;);// 导入 在内存中">
+<meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql报错问题-1045 - Access denied for user ">
-<meta property="og:url" content="http://yoursite.com/2018/07/07/mysql-报错问题/index.html">
+<meta property="og:title" content="webpack入门-html-webpack-plugin">
+<meta property="og:url" content="http://yoursite.com/2018/08/31/webpack入门-html-webpack-plugin/index.html">
 <meta property="og:site_name" content="柠檬草的味道">
-<meta property="og:description" content="遇到MySQL错误代码#1045 Access denied for user &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; (using password:YES) 需要重置root账号权限密码，这个一般还真不好解决。  第一点，停止mysql服务，CMD打开DOS窗口，输入 net stop mysql；不过有时候不停止也是无所谓；  第二点，在CMD命令行窗口，进入M">
+<meta property="og:description" content="html-webpack-plugin作用： 自动在内存中根据指定页面生成一个内存的页面 自动把打包好的bundle.js追加到页面中去,模板中就不需要引入bundle.js了  安装npm install  html-webpack-plugin -D 使用方法12345678910111213141516171819const path = require(&apos;path&apos;);// 导入 在内存中">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-07T13:26:55.904Z">
+<meta property="og:updated_time" content="2018-08-31T15:04:37.946Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql报错问题-1045 - Access denied for user ">
-<meta name="twitter:description" content="遇到MySQL错误代码#1045 Access denied for user &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; (using password:YES) 需要重置root账号权限密码，这个一般还真不好解决。  第一点，停止mysql服务，CMD打开DOS窗口，输入 net stop mysql；不过有时候不停止也是无所谓；  第二点，在CMD命令行窗口，进入M">
+<meta name="twitter:title" content="webpack入门-html-webpack-plugin">
+<meta name="twitter:description" content="html-webpack-plugin作用： 自动在内存中根据指定页面生成一个内存的页面 自动把打包好的bundle.js追加到页面中去,模板中就不需要引入bundle.js了  安装npm install  html-webpack-plugin -D 使用方法12345678910111213141516171819const path = require(&apos;path&apos;);// 导入 在内存中">
 
 
 
@@ -114,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/07/mysql-报错问题/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/31/webpack入门-html-webpack-plugin/"/>
 
 
 
 
 
-  <title>mysql报错问题-1045 - Access denied for user  | 柠檬草的味道</title>
+  <title>webpack入门-html-webpack-plugin | 柠檬草的味道</title>
   
 
 
@@ -261,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/07/mysql-报错问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/webpack入门-html-webpack-plugin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Han Meilan">
@@ -278,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mysql报错问题-1045 - Access denied for user </h1>
+          <h1 class="post-title" itemprop="name headline">webpack入门-html-webpack-plugin</h1>
         
 
         <div class="post-meta">
@@ -290,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-07T21:17:22+08:00">
-                2018-07-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T23:02:20+08:00">
+                2018-08-31
               </time>
             
 
@@ -328,15 +329,12 @@
       
 
       
-        <p>遇到MySQL<code>错误代码#1045 Access denied for user &#39;root&#39;@&#39;localhost&#39; (using password:YES)</code> 需要重置root账号权限密码，这个一般还真不好解决。</p>
-<ul>
-<li><p>第一点，停止mysql服务，CMD打开DOS窗口，输入 <code>net stop mysql</code>；不过有时候不停止也是无所谓；</p>
-</li>
-<li><p>第二点，在CMD命令行窗口，进入MYSQL安装目录 比如<code>E:\APMServ5.2.6\MySQL5.1\bin</code>（我用的就是APMServer）</p>
-</li>
-<li>第三点，在第二点的命令窗口输入命令为：<code>mysqld -nt --skip-grant-tables</code>。作用是，进入mysql安全模式，即当mysql起来后，不用输入密码就能进入数据库。 </li>
+        <h3 id="html-webpack-plugin"><a href="#html-webpack-plugin" class="headerlink" title="html-webpack-plugin"></a>html-webpack-plugin</h3><h5 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h5><ul>
+<li>自动在内存中根据指定页面生成一个内存的页面</li>
+<li>自动把打包好的bundle.js追加到页面中去,模板中就不需要引入bundle.js了</li>
 </ul>
-<p>这时候可以进入数据库后，给自己的数据库重新设置密码就可以了！</p>
+<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><p><code>npm install  html-webpack-plugin -D</code></p>
+<h5 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="comment">// 导入 在内存中生成 HTML页面 的插件</span></span><br><span class="line"><span class="comment">// 只要是插件 都一定要放到 plugins节点中去</span></span><br><span class="line"><span class="keyword">const</span> htmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    mode: <span class="string">'production'</span>,</span><br><span class="line">    entry: path.join(__dirname, <span class="string">'./src/index.js'</span>),</span><br><span class="line">    output: &#123; <span class="comment">// 出口</span></span><br><span class="line">        path: path.join(__dirname, <span class="string">'./dist'</span>),</span><br><span class="line">        filename: <span class="string">'bundle.js'</span></span><br><span class="line">    &#125;,</span><br><span class="line">   </span><br><span class="line">    plugins: [ <span class="comment">//配置插件的节点</span></span><br><span class="line">        <span class="keyword">new</span> htmlWebpackPlugin(&#123; <span class="comment">//创建一个 在内存中 生成 HTML 页面的插件</span></span><br><span class="line">            template: path.join(__dirname,<span class="string">'./src/index.html'</span>),<span class="comment">//指定模板页面,会根据指定页面的路径，去生成内存中的页面</span></span><br><span class="line">            filename:<span class="string">'index.html'</span><span class="comment">//指定生成的页面的名称</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -352,6 +350,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
+          
+        </div>
+      
 
       
       
@@ -361,8 +365,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/30/px-profile/" rel="next" title="像素，分辨率，rem">
-                <i class="fa fa-chevron-left"></i> 像素，分辨率，rem
+              <a href="/2018/08/31/webpack入门-webpack-dev-server/" rel="next" title="webpack入门-webpack-dev-server">
+                <i class="fa fa-chevron-left"></i> webpack入门-webpack-dev-server
               </a>
             
           </div>
@@ -371,8 +375,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/31/webpack4-webpack3-的区别/" rel="prev" title="webpack4 与 webpack3 的区别">
-                webpack4 与 webpack3 的区别 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/31/webpack入门-loader/" rel="prev" title="webpack入门-loader">
+                webpack入门-loader <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -423,8 +427,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -479,6 +492,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#html-webpack-plugin"><span class="nav-number">1.</span> <span class="nav-text">html-webpack-plugin</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#作用："><span class="nav-number">1.0.1.</span> <span class="nav-text">作用：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装"><span class="nav-number">1.0.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用方法"><span class="nav-number">1.0.3.</span> <span class="nav-text">使用方法</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
